@@ -23,7 +23,7 @@ import { filterFlag } from "./main.js";
 //   });
 // });
 
-describe("Comparing filtering on individual keys", () => {
+describe("Comparing filtering on individual keys (ex. colours)", () => {
   test.each([
     [
       {
@@ -81,6 +81,76 @@ describe("Comparing filtering on individual keys", () => {
         "Venezuela",
         "Netherlands",
         "Romania",
+      ],
+      full_flag_list,
+    ],
+  ])("An input of %o should return %o", (a, b, c) => {
+    expect(filterFlag(a, c)).toEqual(expect.arrayContaining(b));
+  });
+
+  test.each([
+    [
+      {
+        hasStars: true,
+      },
+      ["China", "Australia", "United States", "Venezuela", "European Union"],
+      full_flag_list,
+    ],
+    [
+      {
+        hasStars: false,
+      },
+      [
+        "Argentina",
+        "Canada",
+        "Belgium",
+        "Germany",
+        "United Kingdom",
+        "Ukraine",
+        "Netherlands",
+        "Japan",
+        "Switzerland",
+        "Romania",
+      ],
+      full_flag_list,
+    ],
+  ])("An input of %o should return %o", (a, b, c) => {
+    expect(filterFlag(a, c)).toEqual(expect.arrayContaining(b));
+  });
+
+  test.each([
+    [
+      {
+        stripeDirection: "vertical",
+      },
+      ["Canada", "Belgium", "Romania"],
+      full_flag_list,
+    ],
+    [
+      {
+        stripeDirection: "horizontal",
+      },
+      [
+        "Argentina",
+        "Germany",
+        "United States",
+        "Ukraine",
+        "Venezuela",
+        "Netherlands",
+      ],
+      full_flag_list,
+    ],
+    [
+      {
+        stripeDirection: null,
+      },
+      [
+        "China",
+        "Australia",
+        "United Kingdom",
+        "European Union",
+        "Japan",
+        "Switzerland",
       ],
       full_flag_list,
     ],
