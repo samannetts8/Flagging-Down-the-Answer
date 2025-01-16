@@ -6,7 +6,7 @@ export const full_flag_list = [
     hasStars: false,
     stripeDirection: "horizontal",
     hasCircles: true, // The sun is a circle
-    colors: ["blue", "white", "yellow"],
+    colours: ["blue", "white", "yellow"],
   },
   //   {
   //     country: "Canada",
@@ -15,7 +15,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: "vertical",
   //     hasCircles: false,
-  //     colors: ["red", "white"],
+  //     colours: ["red", "white"],
   //   },
   //   {
   //     country: "Belgium",
@@ -24,7 +24,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: "vertical",
   //     hasCircles: false,
-  //     colors: ["black", "yellow", "red"],
+  //     colours: ["black", "yellow", "red"],
   //   },
   //   {
   //     country: "China",
@@ -33,7 +33,7 @@ export const full_flag_list = [
   //     hasStars: true,
   //     stripeDirection: null, // No stripes
   //     hasCircles: false,
-  //     colors: ["red", "yellow"],
+  //     colours: ["red", "yellow"],
   //   },
   //   {
   //     country: "Australia",
@@ -42,7 +42,7 @@ export const full_flag_list = [
   //     hasStars: true,
   //     stripeDirection: null, // No stripes
   //     hasCircles: false,
-  //     colors: ["blue", "white", "red"],
+  //     colours: ["blue", "white", "red"],
   //   },
   //   {
   //     country: "Germany",
@@ -51,7 +51,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: "horizontal",
   //     hasCircles: false,
-  //     colors: ["black", "red", "yellow"],
+  //     colours: ["black", "red", "yellow"],
   //   },
   //   {
   //     country: "United States",
@@ -60,7 +60,7 @@ export const full_flag_list = [
   //     hasStars: true,
   //     stripeDirection: "horizontal",
   //     hasCircles: false,
-  //     colors: ["red", "white", "blue"],
+  //     colours: ["red", "white", "blue"],
   //   },
   //   {
   //     country: "United Kingdom",
@@ -69,7 +69,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: null, // Cross pattern
   //     hasCircles: false,
-  //     colors: ["red", "white", "blue"],
+  //     colours: ["red", "white", "blue"],
   //   },
   //   {
   //     country: "Ukraine",
@@ -78,7 +78,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: "horizontal",
   //     hasCircles: false,
-  //     colors: ["blue", "yellow"],
+  //     colours: ["blue", "yellow"],
   //   },
   //   {
   //     country: "Venezuela",
@@ -87,7 +87,7 @@ export const full_flag_list = [
   //     hasStars: true,
   //     stripeDirection: "horizontal",
   //     hasCircles: false,
-  //     colors: ["yellow", "blue", "red"],
+  //     colours: ["yellow", "blue", "red"],
   //   },
   //   {
   //     country: "Netherlands",
@@ -96,7 +96,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: "horizontal",
   //     hasCircles: false,
-  //     colors: ["red", "white", "blue"],
+  //     colours: ["red", "white", "blue"],
   //   },
   //   {
   //     country: "European Union",
@@ -105,7 +105,7 @@ export const full_flag_list = [
   //     hasStars: true,
   //     stripeDirection: null, // No stripes
   //     hasCircles: false,
-  //     colors: ["blue", "yellow"],
+  //     colours: ["blue", "yellow"],
   //   },
   //   {
   //     country: "Japan",
@@ -114,7 +114,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: null, // No stripes
   //     hasCircles: true, // Red circle
-  //     colors: ["white", "red"],
+  //     colours: ["white", "red"],
   //   },
   //   {
   //     country: "Switzerland",
@@ -123,7 +123,7 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: null, // No stripes
   //     hasCircles: false,
-  //     colors: ["red", "white"],
+  //     colours: ["red", "white"],
   //   },
   //   {
   //     country: "Romania",
@@ -132,6 +132,6 @@ export const full_flag_list = [
   //     hasStars: false,
   //     stripeDirection: "vertical",
   //     hasCircles: false,
-  //     colors: ["blue", "yellow", "red"],
+  //     colours: ["blue", "yellow", "red"],
   //   },
 ];
