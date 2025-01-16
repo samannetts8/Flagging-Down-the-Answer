@@ -1,5 +1,3 @@
-import { full_flag_list } from "./flag_database";
-
 /**
  * Hello bootcampers!
  *
@@ -25,7 +23,7 @@ import { full_flag_list } from "./flag_database";
  *      Any images of the sun is counted as a circle
  *      Flags with crosses (e.g. the UK) or no stripes will be marked as null
  *
- * Your function should handle input objects with varying sets of characteristics, and only return the names of the countries.
+ * Your function should handle input objects with varying sets of characteristics, and only return the names of the countries. You can assume that all provided attributes have corresponding entries in the full_flag_list object.
  *
  * A few examples:
  *      filterFlag({hasStripes: true, hasCircles: true},full_flag_list) should return ['Argentina'] as this is the only flag with both stripes and a circle
@@ -34,5 +32,29 @@ import { full_flag_list } from "./flag_database";
  * Best of luck!!
  */
 export function filterFlag(search_terms, full_flag_list) {
-  return ["Argentina"];
+  const output = [];
+  const attribute = Object.keys(search_terms)[0];
+  const full_flag_count = full_flag_list.length;
+  for (let i = 0; i < full_flag_count; i++) {
+    if (full_flag_list[i][attribute] === search_terms[attribute]) {
+      output.push(full_flag_list[i].country);
+    }
+  }
+  return output;
 }
+
+
+
+
+
+
+
+
+
+
+
+// for (const country_entry in full_flag_list) {
+//     if (full_flag_list[attribute] === search_terms[attribute]) {
+//       output.append(full_flag_list[country_entry.country]);
+//     }
+//   }
