@@ -10,13 +10,13 @@
  *
  * For reference, for each country held within the list, all details for that country's flag is stored in an object with the following keys:
  *  {
- *   country: "XXX",
+ *   country: string,
  *   hasStripes: boolean,
  *   numberOfColors: int,
  *   hasStars: boolean,
  *   stripeDirection: string, (can be "horizontal", "vertical" or null)
- *   hasCircles: boolean, // The sun is a circle
- *   colours: [string, string, string,etc],
+ *   hasCircles: boolean,
+ *   colours: [string, string, string], (Can be an array containing varying number of strings)
  * }
  *
  * A couple of extra notes for this challenge include:
@@ -27,7 +27,8 @@
  *
  * A few examples:
  *      filterFlag({hasStripes: true, hasCircles: true},full_flag_list) should return ['Argentina'] as this is the only flag with both stripes and a circle
- *
+ *      filterFlag({colours: [ 'red', 'yellow' ], numberOfColors: 3}) should return [ 'Belgium', 'Germany', 'Venezuela', 'Romania']
+ *      filterFlag({hasStripes: false, numberOfColors: 2, stripeDirection: null}) should return [ 'China', 'European Union', 'Japan', 'Switzerland' ])
  *
  * Best of luck!!
  */

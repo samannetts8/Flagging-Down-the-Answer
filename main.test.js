@@ -211,3 +211,19 @@ describe("Comparing filtering on multiple keys (incl colours)", () => {
     expect(filterFlag(a, c)).toEqual(b);
   });
 });
+
+describe("Output is appropriate datatype ", () => {
+  test("Output should be a array", () => {
+    //Arrange
+    const a = {
+      hasStripes: true,
+      hasCircles: true,
+    };
+    const b = full_flag_list;
+    const expected = ["Argentina"];
+    //Act
+    const actual = filterFlag(a, b);
+    //Assert
+    expect(actual).toBeInstanceOf(Array);
+  });
+});
