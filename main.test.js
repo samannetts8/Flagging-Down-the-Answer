@@ -179,3 +179,27 @@ describe("Comparing filtering on multiple keys (ex. colours)", () => {
     expect(filterFlag(a, c)).toEqual(b);
   });
 });
+
+describe("Comparing filtering on multiple keys (incl colours)", () => {
+  test.each([
+    [
+      {
+        colours: ["red"],
+        numberOfColors: 3,
+      },
+      [
+        "Belgium",
+        "Australia",
+        "Germany",
+        "United States",
+        "United Kingdom",
+        "Venezuela",
+        "Netherlands",
+        "Romania",
+      ],
+      full_flag_list,
+    ],
+  ])("An input of %o should return %o", (a, b, c) => {
+    expect(filterFlag(a, c)).toEqual(b);
+  });
+});

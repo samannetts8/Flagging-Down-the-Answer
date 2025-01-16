@@ -31,13 +31,20 @@
  *
  * Best of luck!!
  */
-
 export function filterFlag(search_terms, full_flag_list) {
   let filtered_list = full_flag_list;
   for (const attribute in search_terms) {
-    filtered_list = filtered_list.filter(
-      (country_data) => search_terms[attribute] === country_data[attribute]
-    );
+    if (attribute === "colours") {
+      for (const colour of search_terms[attribute]) {
+        filtered_list = filtered_list.filter((country_data) =>
+          country_data[attribute].includes(colour)
+        );
+      }
+    } else {
+      filtered_list = filtered_list.filter(
+        (country_data) => search_terms[attribute] === country_data[attribute]
+      );
+    }
   }
   let output = [];
   for (const country_data of filtered_list) {
@@ -45,18 +52,3 @@ export function filterFlag(search_terms, full_flag_list) {
   }
   return output;
 }
-
-// for (let i = 0; i < full_flag_count; i++) {
-//     if (pre_filter[i].attribute !== search_terms.attribute) {
-//       post_filter.push(pre_filter[i]);
-//     }
-//   }
-//   pre_filter = post_filter;
-//   post_filter = [];
-// }
-
-// for (const country_entry in full_flag_list) {
-//     if (full_flag_list[attribute] === search_terms[attribute]) {
-//       output.append(full_flag_list[country_entry.country]);
-//     }
-//   }
