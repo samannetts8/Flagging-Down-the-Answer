@@ -9,10 +9,9 @@ describe("Comparing actual to expected results", () => {
         hasStripes: true,
         hasCircles: true,
       },
-      full_flag_list,
       ["Argentina"],
     ],
-  ])("An input of %o should return %o", (a, _, c) => {
-    expect(filterFlag(a)).toEqual(expect.arrayContaining(c));
+  ])("An input of %o should return %o", (a, b) => {
+    expect(filterFlag(a)).toEqual(expect.arrayContaining(b));
   });
 });

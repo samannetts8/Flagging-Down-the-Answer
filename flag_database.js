@@ -8,15 +8,15 @@ export const full_flag_list = [
     hasCircles: true, // The sun is a circle
     colours: ["blue", "white", "yellow"],
   },
-  //   {
-  //     country: "Canada",
-  //     hasStripes: true,
-  //     numberOfColors: 2,
-  //     hasStars: false,
-  //     stripeDirection: "vertical",
-  //     hasCircles: false,
-  //     colours: ["red", "white"],
-  //   },
+  {
+    country: "Canada",
+    hasStripes: true,
+    numberOfColors: 2,
+    hasStars: false,
+    stripeDirection: "vertical",
+    hasCircles: false,
+    colours: ["red", "white"],
+  },
   //   {
   //     country: "Belgium",
   //     hasStripes: true,
