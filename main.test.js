@@ -2,27 +2,6 @@ import { full_flag_list } from "./flag_database";
 import { describe, expect, test } from "vitest";
 import { filterFlag } from "./main.js";
 
-// describe("Comparing actual to expected results", () => {
-//   test.each([
-//     [
-//       {
-//         hasStripes: true,
-//         hasCircles: true,
-//       },
-//       ["Argentina"],
-//     ],
-//     [
-//       {
-//         hasStripes: true,
-//         hasCircles: false,
-//       },
-//       ["Canada"],
-//     ],
-//   ])("An input of %o should return %o", (a, b) => {
-//     expect(filterFlag(a)).toEqual(expect.arrayContaining(b));
-//   });
-// });
-
 describe("Comparing filtering on individual keys (ex. colours)", () => {
   test.each([
     [
@@ -57,7 +36,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
       full_flag_list,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
-    expect(filterFlag(a, c)).toEqual(expect.arrayContaining(b));
+    expect(filterFlag(a, c)).toEqual(b);
   });
 
   test.each([
@@ -76,6 +55,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Argentina",
         "Belgium",
         "Australia",
+        "Germany",
         "United States",
         "United Kingdom",
         "Venezuela",
@@ -85,7 +65,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
       full_flag_list,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
-    expect(filterFlag(a, c)).toEqual(expect.arrayContaining(b));
+    expect(filterFlag(a, c)).toEqual(b);
   });
 
   test.each([
@@ -115,7 +95,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
       full_flag_list,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
-    expect(filterFlag(a, c)).toEqual(expect.arrayContaining(b));
+    expect(filterFlag(a, c)).toEqual(b);
   });
 
   test.each([
@@ -155,6 +135,29 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
       full_flag_list,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
-    expect(filterFlag(a, c)).toEqual(expect.arrayContaining(b));
+    expect(filterFlag(a, c)).toEqual(b);
+  });
+});
+
+describe("Comparing filtering on multiple keys (ex. colours)", () => {
+  test.each([
+    [
+      {
+        hasStripes: true,
+        numberOfColors: 3,
+      },
+      [
+        "Argentina",
+        "Belgium",
+        "Germany",
+        "United States",
+        "Venezuela",
+        "Netherlands",
+        "Romania",
+      ],
+      full_flag_list,
+    ],
+  ])("An input of %o should return %o", (a, b, c) => {
+    expect(filterFlag(a, c)).toEqual(b);
   });
 });
