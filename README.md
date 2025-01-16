@@ -111,4 +111,3 @@ Make sure you present your project in [the markdown file here](/PROJECT_PRESENTA
 ### 🎫 Ticket 7 - Complete katas from others
 
 To solve katas created by other bootcampers, first clone their repository using the shared link. `cd` into the folder, run `npm install` to get the dependencies, then implement a solution in main.js. Execute their test cases to validate your code against their requirements. Provide feedback on the clarity of their instructions, difficulty level, and effectiveness of the tests. Engaging with each other's challenges allows everyone to learn. Make sure to critique respectfully - creating a programming challenge is difficult!
-
