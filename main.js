@@ -9,6 +9,7 @@
  * when given some characteristics of the flag, interact with the provided flag 'library' and return the country/countries that you may be in!
  *
  * For reference, for each country held within the list, all details for that country's flag is stored in an object with the following keys:
+ *
  *  {
  *   country: string,
  *   hasStripes: boolean,

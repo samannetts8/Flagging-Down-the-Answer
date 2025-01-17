@@ -207,6 +207,18 @@ describe("Comparing filtering on multiple keys (incl colours)", () => {
       ["Belgium", "Germany", "Venezuela", "Romania"],
       full_flag_list,
     ],
+    [
+      {
+        hasStripes: true,
+        numberOfColors: 2,
+        hasStars: false,
+        stripeDirection: "vertical",
+        hasCircles: false,
+        colours: ["red", "white"],
+      },
+      ["Canada"],
+      full_flag_list,
+    ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
   });
