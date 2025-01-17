@@ -6,7 +6,7 @@
  * What did I eat for dinner last night? Where did I put my keys?...What country am I in again?...
  *
  * Imagine you've had one of these moments and all you've got to go off is a waving flag in front of you. Your challenge is to write a function that,
- * when given some characteristics of the flag, interact with the provided flag 'library' and return the country/countries that you may be in!
+ * when given some characteristics of the flag, interact with the provided flag 'library' (full_flag_list) and return the country/countries that you may be in!
  *
  * For reference, for each country held within the list, all details for that country's flag is stored in an object with the following keys:
  *
