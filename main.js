@@ -34,23 +34,5 @@
  * Best of luck!!
  */
 export function filterFlag(search_terms, full_flag_list) {
-  let filtered_list = full_flag_list;
-  for (const attribute in search_terms) {
-    if (attribute === "colours") {
-      for (const colour of search_terms[attribute]) {
-        filtered_list = filtered_list.filter((country_data) =>
-          country_data[attribute].includes(colour)
-        );
-      }
-    } else {
-      filtered_list = filtered_list.filter(
-        (country_data) => search_terms[attribute] === country_data[attribute]
-      );
-    }
-  }
-  let output = [];
-  for (const country_data of filtered_list) {
-    output.push(country_data.country);
-  }
-  return output;
+  //Input your solution here!
 }
