@@ -232,7 +232,7 @@ describe("Output is appropriate datatype ", () => {
       hasCircles: true,
     };
     const b = full_flag_list;
-    const expected = ["Argentina"];
+
     //Act
     const actual = filterFlag(a, b);
     //Assert
