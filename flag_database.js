@@ -1,4 +1,4 @@
-export const full_flag_list = [
+export const FULL_FLAG_LIST = Object.freeze([
   {
     country: "Argentina",
     hasStripes: true,
@@ -134,4 +134,4 @@ export const full_flag_list = [
     hasCircles: false,
     colours: ["blue", "yellow", "red"],
   },
-];
+]);
