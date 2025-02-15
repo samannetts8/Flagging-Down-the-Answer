@@ -11,10 +11,11 @@ For this project, you are aiming to create a function that filters a list of cou
 - [Installation](#installation)
 - [Data Structure](#data-structure)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- [Function Requirements](#Function-Requirements)
+- [Constraints](#Constraints)
+- [Example Usage](#Example-Usage)
+- [Evaluation Criteria](#Evaluation-Criteria)
+- [Project Requirements](#Project-Requirements)
 
 ## Installation
 
