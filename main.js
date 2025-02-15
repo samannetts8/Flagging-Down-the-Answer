@@ -34,15 +34,7 @@
  * Best of luck!!
  */
 export function filterFlag(searchTerms, fullFlagList) {
-  const filteredList = fullFlagList.filter((countryData) => {
-    return Object.entries(searchTerms).every(([key, value]) => {
-      if (key === "colours") {
-        return value.every((colour) => countryData[key].includes(colour));
-      }
-      return countryData[key] === value;
-    });
-  });
-  return filteredList.map((countryData) => countryData.country);
+  // Input your solution here!
 }
 
 // An input of hasStripes: true should equal ["Argentina","Canada","Belgium","Germany","United States","Ukraine","Venezuela","Netherlands","Romania
