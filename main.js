@@ -6,7 +6,7 @@
  * What did I eat for dinner last night? Where did I put my keys?...What country am I in again?...
  *
  * Imagine you've had one of these moments and all you've got to go off is a waving flag in front of you. Your challenge is to write a function that,
- * when given some characteristics of the flag, interact with the provided flag 'library' (full_flag_list) and return the country/countries that you may be in!
+ * when given some characteristics of the flag, interact with the provided flag 'library' (FULL_FLAG_LIST) and return the country/countries that you may be in!
  *
  * For reference, for each country held within the list, all details for that country's flag is stored in an object with the following keys:
  *
@@ -24,10 +24,10 @@
  *      Any images of the sun is counted as a circle
  *      Flags with crosses (e.g. the UK) or no stripes will be marked as null
  *
- * Your function should handle input objects with varying sets of characteristics, and only return the names of the countries. You can assume that all provided attributes have corresponding entries in the full_flag_list object.
+ * Your function should handle input objects with varying sets of characteristics, and only return the names of the countries. You can assume that all provided attributes have corresponding entries in the FULL_FLAG_LIST object.
  *
  * A few examples:
- *      filterFlag({hasStripes: true, hasCircles: true},full_flag_list) should return ['Argentina'] as this is the only flag with both stripes and a circle
+ *      filterFlag({hasStripes: true, hasCircles: true},FULL_FLAG_LIST) should return ['Argentina'] as this is the only flag with both stripes and a circle
  *      filterFlag({colours: [ 'red', 'yellow' ], numberOfColors: 3}) should return [ 'Belgium', 'Germany', 'Venezuela', 'Romania']
  *      filterFlag({hasStripes: false, numberOfColors: 2, stripeDirection: null}) should return [ 'China', 'European Union', 'Japan', 'Switzerland' ])
  *
@@ -44,9 +44,5 @@ export function filterFlag(searchTerms, fullFlagList) {
   });
   return filteredList.map((countryData) => countryData.country);
 }
-
-
-
-
 
 // An input of hasStripes: true should equal ["Argentina","Canada","Belgium","Germany","United States","Ukraine","Venezuela","Netherlands","Romania

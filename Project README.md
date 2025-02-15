@@ -1,6 +1,4 @@
-Put your plan, story, and any supporting material here, you could use the help of a readme markdown generator such as [readme.so](https://readme.so/)
-
-# Around the world in 80 Margaritas
+# Flagging Down the Answer
 
 ## Project Summary
 
@@ -10,7 +8,26 @@ The aim of this project was to create a fun and engaging Javascript challenge th
 
 For this project, you are aiming to create a function that filters a list of countries based on the characteristics of their flags. The function, filterFlag, takes two arguments: an object containing the search terms (characteristics of the flag) and an array of flag data (FULL_FLAG_LIST). The function returns an array of country names that match the given characteristics.
 
-### Flag Data Structure
+- [Installation](#installation)
+- [Data Structure](#data-structure)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/samannetts/flag-identification.git
+   ```
+2. Install the dependencies:
+   ```sh
+   npm install
+   ```
+
+### Data Structures
 
 Each country's flag is represented by an object with the following keys:
 
@@ -22,6 +39,22 @@ Each country's flag is represented by an object with the following keys:
 - `hasCircles`: boolean
 - `colours`: [string, string, string] (an array containing varying number of strings)
 
+### Testing
+
+To run the tests, use the following command:
+
+```sh
+npm test
+```
+
+Ensure that Vitest is installed as a development dependency:
+
+```sh
+npm install --save-dev vitest
+```
+
+Ensure that Vitest is installed as a development dependency:
+
 ### Function Requirements
 
 The `filterFlag` function should:
@@ -29,18 +62,14 @@ The `filterFlag` function should:
 1. Handle input objects with varying sets of characteristics.
 2. Return the names of the countries that match the given characteristics.
 
-### Requirements
-
-Environment Dependencies:
-
-- Run [npm install] in your terminal to install the required dependencies for this project
-- Trigger the test suite through typing the command [npm run test] in your terminal
+### Constraints
 
 Input Constraints:
 
-- Number of keys in search_terms will be <= 6
-- Input will never be null
-- All input keys will have a corresponding value in the object FULL_FLAG_LIST
+- The function must handle input objects with up to 6 keys.
+- Input will never be null.
+- All input keys will have corresponding values in the `FULL_FLAG_LIST` object.
+- The function should return an array of strings representing country names.
 
 Output Format:
 
@@ -58,64 +87,8 @@ Output Format:
 - Input will never be null
 - All input keys will have a corresponding value in the object FULL_FLAG_LIST
 
-## Planning Phase
+## Project Requirements
 
-### Project Requirements
-
-- Design a full suite of tests to evaluate proposed solution against various input objects
--
-- Technical constraints and limitations
-
-### Resources
-
-- Team members and roles
-- Budget allocation
-- Required tools and technologies
-
-## Brainstorming
-
-### Ideas & Concepts
-
-1. First major concept
-
-   - Supporting details
-   - Potential challenges
-   - Implementation approaches
-
-2. Second major concept
-   - Supporting details
-   - Potential challenges
-   - Implementation approaches
-
-## Implementation
-
-### Progress Tracking
-
-- [ ] Task 1
-  - [ ] Subtask A
-  - [ ] Subtask B
-- [ ] Task 2
-  - [ ] Subtask A
-  - [ ] Subtask B
-
-## User Feedback
-
-### Testing Results
-
-### User Testimonials
-
-> "User quote providing specific feedback about the project"
-
-### Improvement Suggestions
-
-1. High priority improvements
-2. Medium priority improvements
-3. Future considerations
-
----
-
-## Appendix
-
-## Authors
-
-- [@samannetts8](https://github.com/samannetts8)
+- Design a full suite of tests to evaluate the proposed solution against various input objects.
+- Ensure the function meets all technical constraints and limitations.
+- Provide clear and comprehensive documentation for users and contributors.
