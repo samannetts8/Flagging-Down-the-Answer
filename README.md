@@ -21,7 +21,7 @@ For this project, you are aiming to create a function that filters a list of cou
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/samannetts/flag-identification.git
+   git clone git@github.com:samannetts8/Flagging-Down-the-Answer.git
    ```
 2. Install the dependencies:
    ```sh
