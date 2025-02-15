@@ -1,4 +1,4 @@
-import { full_flag_list } from "./flag_database";
+import { FULL_FLAG_LIST } from "./flag_database";
 import { describe, expect, test } from "vitest";
 import { filterFlag } from "./main.js";
 
@@ -19,7 +19,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Netherlands",
         "Romania",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -33,7 +33,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Japan",
         "Switzerland",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
@@ -45,7 +45,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         numberOfColors: 2,
       },
       ["Canada", "China", "Ukraine", "European Union", "Japan", "Switzerland"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -62,7 +62,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Netherlands",
         "Romania",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
@@ -74,7 +74,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         hasStars: true,
       },
       ["China", "Australia", "United States", "Venezuela", "European Union"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -92,7 +92,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Switzerland",
         "Romania",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
@@ -104,7 +104,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         stripeDirection: "vertical",
       },
       ["Canada", "Belgium", "Romania"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -118,7 +118,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Venezuela",
         "Netherlands",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -132,7 +132,7 @@ describe("Comparing filtering on individual keys (ex. colours)", () => {
         "Japan",
         "Switzerland",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
@@ -155,7 +155,7 @@ describe("Comparing filtering on multiple keys (ex. colours)", () => {
         "Netherlands",
         "Romania",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -164,7 +164,7 @@ describe("Comparing filtering on multiple keys (ex. colours)", () => {
         stripeDirection: null,
       },
       ["China", "European Union", "Japan", "Switzerland"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -173,7 +173,7 @@ describe("Comparing filtering on multiple keys (ex. colours)", () => {
         stripeDirection: "horizontal",
       },
       ["Argentina", "Germany", "United States", "Venezuela", "Netherlands"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
@@ -197,7 +197,7 @@ describe("Comparing filtering on multiple keys (incl colours)", () => {
         "Netherlands",
         "Romania",
       ],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -205,7 +205,7 @@ describe("Comparing filtering on multiple keys (incl colours)", () => {
         numberOfColors: 3,
       },
       ["Belgium", "Germany", "Venezuela", "Romania"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
     [
       {
@@ -217,7 +217,7 @@ describe("Comparing filtering on multiple keys (incl colours)", () => {
         colours: ["red", "white"],
       },
       ["Canada"],
-      full_flag_list,
+      FULL_FLAG_LIST,
     ],
   ])("An input of %o should return %o", (a, b, c) => {
     expect(filterFlag(a, c)).toEqual(b);
@@ -225,13 +225,13 @@ describe("Comparing filtering on multiple keys (incl colours)", () => {
 });
 
 describe("Output is appropriate datatype ", () => {
-  test("Output should be a array", () => {
+  test("Output should be an array", () => {
     //Arrange
     const a = {
       hasStripes: true,
       hasCircles: true,
     };
-    const b = full_flag_list;
+    const b = FULL_FLAG_LIST;
 
     //Act
     const actual = filterFlag(a, b);

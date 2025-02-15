@@ -33,24 +33,20 @@
  *
  * Best of luck!!
  */
-export function filterFlag(search_terms, full_flag_list) {
-  let filtered_list = full_flag_list;
-  for (const attribute in search_terms) {
-    if (attribute === "colours") {
-      for (const colour of search_terms[attribute]) {
-        filtered_list = filtered_list.filter((country_data) =>
-          country_data[attribute].includes(colour)
-        );
+export function filterFlag(searchTerms, fullFlagList) {
+  const filteredList = fullFlagList.filter((countryData) => {
+    return Object.entries(searchTerms).every(([key, value]) => {
+      if (key === "colours") {
+        return value.every((colour) => countryData[key].includes(colour));
       }
-    } else {
-      filtered_list = filtered_list.filter(
-        (country_data) => search_terms[attribute] === country_data[attribute]
-      );
-    }
-  }
-  let output = [];
-  for (const country_data of filtered_list) {
-    output.push(country_data.country);
-  }
-  return output;
+      return countryData[key] === value;
+    });
+  });
+  return filteredList.map((countryData) => countryData.country);
 }
+
+
+
+
+
+// An input of hasStripes: true should equal ["Argentina","Canada","Belgium","Germany","United States","Ukraine","Venezuela","Netherlands","Romania
