@@ -23,7 +23,13 @@ For this project, you are aiming to create a function that filters a list of cou
    ```sh
    git clone git@github.com:samannetts8/Flagging-Down-the-Answer.git
    ```
-2. Install the dependencies:
+
+2. Navigate to the project directory:
+   ```bash
+   cd Flagging-Down-the-Answer
+   ```
+
+3. Install the dependencies:
    ```sh
    npm install
    ```
